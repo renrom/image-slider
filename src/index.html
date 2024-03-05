@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="René Romijn">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
+    <!-- <script src="./scripts/index.js" defer></script> -->
+    <script src="./dist/main.js" defer></script>
+
 </head>
+
+
 <body>
+    <div class="container">
+        <div class="header">
+            <p>Header</p>
+        </div>
+
+        <div class="image-frame">
+            <div class="image-container"> </div>
+
+        </div>
+
+        <div class="slide-control">
+            <div class="slide-image image-left">
+                Left </div>
+
+                <div class="dots"></div>
+    
+                    <div class="slide-image image-right"> Right </div>
+    
+    
+        </div>
+                <div class="footer"></div>
+
+        </div>
 </body>
+
 </html>

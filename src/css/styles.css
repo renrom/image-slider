@@ -3,3 +3,46 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
+.image-frame {
+
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.slide-image {
+
+
+	font-size: 3rem;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.image-container {
+
+	position: absolute;
+}
+
+.image {
+	position: absolute;
+	margin-top: 300px;
+	transform: translate(-50%, -50%);
+	border: 3px solid red;
+	border-radius: 5%;
+	box-shadow: 5px 5px 22px lightblue;
+	transition: visibility 0.3s, opacity 0.3s ease-in-out;
+
+
+}
+
+.slide-control {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+	margin-top: 540px;
+	text-align: center;
+}
