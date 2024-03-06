@@ -8,9 +8,7 @@
     <title>
         <%= htmlWebpackPlugin.options.title %>
     </title>
-    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
-    <!-- <script src="./scripts/index.js" defer></script> -->
-    <script src="./dist/main.js" defer></script>
+
 
 </head>
 
@@ -28,17 +26,19 @@
 
         <div class="slide-control">
             <div class="slide-image image-left">
-                Left </div>
+                <img id="leftSlide" alt="">
+            </div>
 
-                <div class="dots"></div>
-    
-                    <div class="slide-image image-right"> Right </div>
-    
-    
-        </div>
-                <div class="footer"></div>
+            <div class="dots"></div>
+
+            <div class="slide-image image-right">
+                <img id="rightSlide" alt="">
+            </div>
 
         </div>
+        <div class="footer"></div>
+
+    </div>
 </body>
 
 </html>

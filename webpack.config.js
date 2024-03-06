@@ -1,5 +1,5 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require("path");
 
 module.exports = {
@@ -10,21 +10,35 @@ module.exports = {
       return !assetFilename.endsWith('.jpg')
     },
   },
-  mode: "production",
-  entry: "./src/scripts/index.js",
-  output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
+  mode: "development",
+  entry: {
+    bundle: path.resolve(__dirname, 'src/scripts/index.js')
   },
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[contenthash].js',
+    clean: true,
+    assetModuleFilename: '[name][ext]'
+  },
+  devtool: 'source-map',
   plugins: [new HtmlWebpackPlugin({
     title: 'Template Website',
-    template: './src/index.html',
-    filename: './index.html',
+    template: 'src/template.html',
+    filename: 'index.html',
   
   })],
   devServer: {
-    static: "./dist",
+    static: {
+      directory: path.resolve(__dirname, 'dist')
+    },
+    port: 3000,
+    open: true,
+    hot: true,
+    compress: true,
+    historyApiFallback: true,
+
   },
+
   module: {
     rules: [
       {

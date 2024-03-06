@@ -1,8 +1,20 @@
 import image1  from '../assets/images/1.jpg';
 import image2  from '../assets/images/2.jpg';
 import image3  from '../assets/images/3.jpg';
+import leftslide from '../assets/images/chevron_left.svg';
+import rightslide from '../assets/images/chevron_right.svg';
 
 import '../css/styles.css';
+
+const leftSlide = document.getElementById('leftSlide');
+const rightSlide = document.getElementById('rightSlide');
+
+
+leftSlide.src = leftslide;
+leftSlide.style.height = '50px'
+rightSlide.src = rightslide;
+rightSlide.style.height = '50px'
+
 
 
 const locationImages = [
