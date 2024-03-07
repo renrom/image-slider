@@ -1,42 +1,41 @@
-
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
   performance: {
     maxAssetSize: 500000,
     maxEntrypointSize: 500000,
-    assetFilter: function(assetFilename) {
-      return !assetFilename.endsWith('.jpg')
+    assetFilter: function (assetFilename) {
+      return !assetFilename.endsWith(".jpg");
     },
   },
   mode: "development",
   entry: {
-    bundle: path.resolve(__dirname, 'src/scripts/index.js')
+    bundle: path.resolve(__dirname, "src/scripts/index.js"),
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[contenthash].js',
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].[contenthash].js",
     clean: true,
-    assetModuleFilename: '[name][ext]'
+    assetModuleFilename: "[name][ext]",
   },
-  devtool: 'source-map',
-  plugins: [new HtmlWebpackPlugin({
-    title: 'Template Website',
-    template: 'src/template.html',
-    filename: 'index.html',
-  
-  })],
+  devtool: "source-map",
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "Template Website",
+      template: "src/template.html",
+      filename: "index.html",
+    }),
+  ],
   devServer: {
     static: {
-      directory: path.resolve(__dirname, 'dist')
+      directory: path.resolve(__dirname, "dist"),
     },
     port: 3000,
     open: true,
     hot: true,
     compress: true,
     historyApiFallback: true,
-
   },
 
   module: {
